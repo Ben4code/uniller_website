@@ -1,0 +1,209 @@
+:root{
+  --maincolor: #d847f1; 
+}
+@font-face{
+  font-family:'Quicksand-Regular';
+  src: url('../fonts/Quicksand/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family:'Quicksand-Bold';
+  src: url('../fonts/Quicksand/Quicksand-Bold.ttf') format('truetype');
+}
+body{
+  font-family:  'Quicksand-Regular', sans-serif;
+}
+.main-header {
+  background: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+.main-header-inner {
+  background: url(../img/bg-4.jpg);
+  background-size: cover;
+  background-position: bottom;
+  min-height: 200px;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+.main-header h1{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+.main-header-inner h1{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+ .main-header .showcase {
+  padding-top: 100px;
+}
+.main-header-inner .showcase {
+  padding-top: 50px;
+}
+.myLink::after{
+  content: "";
+  display: table;
+  transition: all .2s ease-in;
+  border-bottom: 4px solid var(--maincolor);
+  color: var(--maincolor);
+  width: 0; 
+}
+.myLink:hover::after{
+  transform: translateX(1%);
+  width: 100%;
+}
+.active-link {
+  color: var(--maincolor);
+  font-weight: bold;
+}
+
+a.brand-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.brand-logo img{
+  width: 15%;
+  background-size: cover;
+  margin-top: 5px;
+}
+
+
+/* About Section */
+
+
+
+/* Overlay class */
+.primary-overlay{
+  background-color: rgba(122, 81, 176, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Developers section */
+.section-developers{
+  position: relative;
+  background-image: url(../img/code.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center ;
+  border-top: #333 solid 5px;
+  border-bottom: #333 solid 5px;
+  min-height: 180px;
+}
+
+/* Section-lang */
+.lang-img{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lang-img img{
+  width: 15%;
+  height: 15%;
+  background-size: contain;
+}
+
+/* Section Podcast */ 
+.section-podcast{
+  position: relative;
+  background-image: url(../img/circuit.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border-top: #333 solid 5px;
+  border-bottom: #333 solid 5px;
+  min-height: 180px;
+}
+.section-podcast .primary-overlay{
+  background-color: rgba(122, 81, 176, .7);
+}
+
+
+/* Testimonial */
+.test{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  font-size: 10px;
+}
+.test-img{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.test-img img{
+  margin-left: 200px;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  border: 4px solid #673AB7;
+  border-radius: 50%;
+  
+}
+.test-quote::before{
+  content: "“";
+  font-size: 2rem;
+  line-height: .5;
+}
+.test-quote::after{
+  content:"”";
+  font-size: 2rem;
+  line-height: .5;
+}
+
+
+
+/* Tabs Page */
+.tabs .indicator{
+  background-color: var(--maincolor);
+}
+
+/* Btn extended */
+.btn-extend{
+  display: block;
+  width: 100%;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 500px){
+  .section-developers,
+  .section-podcast{
+    min-height: 240px;
+  }
+  .test-img img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .test-img img{
+    width: 100px;
+    height: 100px;
+    margin-left: 0;
+  }
+  .test-p p{
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .test-img img{  
+    margin-left: 0;
+  }
+  .test-img {
+    justify-content: flex-end;
+  }
+ 
+}
